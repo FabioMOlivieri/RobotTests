@@ -1,0 +1,13 @@
+{
+  "rfLanguageServer.includePaths": [
+    "**/*.robot",
+    "**/*.py"
+    ],
+    "rfLanguageServer.libraries": [
+      "BuiltIn-3.0.4",
+      "Collections-3.0.4",
+      "OperatingSystem-3.0.4",
+      "String-3.0.4",
+      "SeleniumLibrary-3.3.1"  
+      ]
+}
