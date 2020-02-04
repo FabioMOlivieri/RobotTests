@@ -20,7 +20,7 @@ Ingresar Usuario
 Ingresar Contrasenia
     [Arguments]    ${aPass}
     ${txtContrasenia}    Capturar Elemento    ${locTxtContrasenia}
-    Ingresar Texto    ${txtContrasenia}    ${aPass}
+    Input Password  ${txtContrasenia}  ${aPass}
 
 Presionar Ingresar
     ${btnIngresar}    Capturar Elemento    ${locBtnIngresar}
