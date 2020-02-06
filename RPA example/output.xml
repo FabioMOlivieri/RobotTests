@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200206 17:12:17.343" rpa="true">
+<suite id="s1" name="RPA" source="C:\Users\fabio.olivieri\RobotTesting\RobotTests\RPA example\RPA.robot">
+<test id="s1-t1" name="Control de integridad">
+<kw name="Connect To Database" library="DatabaseLibrary">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<arguments>
+<arg>pymssql</arg>
+<arg>${gDBNameUat}</arg>
+<arg>${gDBUserUat}</arg>
+<arg>${gDBPassUat}</arg>
+<arg>${gDBHostUat}</arg>
+<arg>${gDBPortUat}</arg>
+</arguments>
+<msg timestamp="20200206 17:12:17.387" level="INFO">Connecting using : pymssql.connect(database=Yard_BB_uat, user=NEORIS\fabio.olivieri, password=Colorado8888, host=ARROSVMSQL043, port=1433) </msg>
+<status status="PASS" starttime="20200206 17:12:17.380" endtime="20200206 17:12:17.469"></status>
+</kw>
+<kw name="Query" library="DatabaseLibrary">
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<arguments>
+<arg>SELECT * FROM T_DRIVER</arg>
+</arguments>
+<assign>
+<var>@{QueryResult}</var>
+</assign>
+<msg timestamp="20200206 17:12:17.470" level="INFO">Executing : Query  |  SELECT * FROM T_DRIVER </msg>
+<msg timestamp="20200206 17:12:17.481" level="INFO">@{QueryResult} = [ (1, 'JOSE GARCIA', '20252208578', True, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-10-08 14:31:02.3090861', None, UUID('9d670000-e217-4f2b-b7a...</msg>
+<status status="PASS" starttime="20200206 17:12:17.469" endtime="20200206 17:12:17.481"></status>
+</kw>
+<kw name="Disconnect From Database" library="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20200206 17:12:17.481" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20200206 17:12:17.481" endtime="20200206 17:12:17.482"></status>
+</kw>
+<status status="PASS" starttime="20200206 17:12:17.380" endtime="20200206 17:12:17.482" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200206 17:12:17.344" endtime="20200206 17:12:17.483"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tasks</stat>
+<stat pass="1" fail="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="RPA">RPA</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
